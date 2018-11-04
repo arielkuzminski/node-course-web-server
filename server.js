@@ -36,7 +36,7 @@ hbs.registerHelper('screamIt', (text) => {
 
 app.get('/', (req, res) => {
     res.render('home.hbs', {
-        welcomeMessage: 'No elo, kurwa!',
+        welcomeMessage: 'No elo!',
         pageTitle: 'Home Page',
     });
 });
@@ -50,6 +50,12 @@ app.get('/about', (req, res) => {
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Ups. Something went wrong...'
+    });
+})
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects'
     });
 })
 
